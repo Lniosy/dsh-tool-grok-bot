@@ -29,9 +29,9 @@ dsh plugin --profile web add github:Lniosy/dsh-tool-grok-bot
 
 ## 登录
 
-把登录写到 `~/.dsh/grok-bot.json`。桌面版不另设目录时就读这里。格式见 [examples/grok-bot.json.example](examples/grok-bot.json.example)。这个文件不要提交，也不要发到 Issue 里。
+不用手填。本机的 Grok Bot 已经登录时，插件自己读取这份登录。先打开一次 Grok Bot，再在 Harness 里调用工具。
 
-也可以改用环境变量 `GROK_BOT_ACCESS_TOKEN` 和 `GROK_BOT_MACHINE_ID`。
+没有安装 Grok Bot 的环境，才把登录写到 `~/.dsh/grok-bot.json`，格式见 [examples/grok-bot.json.example](examples/grok-bot.json.example)。这个文件不要提交。环境变量 `GROK_BOT_ACCESS_TOKEN` 和 `GROK_BOT_MACHINE_ID` 可以盖过本机登录。
 
 ## 许可
 

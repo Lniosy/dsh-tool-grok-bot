@@ -27,9 +27,9 @@ dsh plugin --profile web add github:Lniosy/dsh-tool-grok-bot
 
 ## Login
 
-Put your own login in `~/.dsh/grok-bot.json`. The desktop app reads that file when it has no other home directory. The shape is in [examples/grok-bot.json.example](examples/grok-bot.json.example). Do not commit that file, and do not paste it into an issue.
+No file to fill in. When Grok Bot is already signed in on this computer, the plugin reads that login itself. Open Grok Bot once, then call a tool from Harness.
 
-`GROK_BOT_ACCESS_TOKEN` and `GROK_BOT_MACHINE_ID` work as well.
+A machine without Grok Bot can still use `~/.dsh/grok-bot.json`. The shape is in [examples/grok-bot.json.example](examples/grok-bot.json.example). Do not commit that file. `GROK_BOT_ACCESS_TOKEN` and `GROK_BOT_MACHINE_ID` override the local login.
 
 ## License
 
