@@ -1,6 +1,6 @@
 {
   "name": "dsh-tool-grok-bot",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Ask one Grok Bot, or several bots, from DeepSeek Harness.",
   "type": "module",
   "main": "lib/index.js",
@@ -8,7 +8,8 @@
   "exports": {
     ".": "./lib/index.js",
     "./cordis.patch.yml": "./cordis.patch.yml",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
   },
   "files": [
     "lib/index.js",
@@ -18,6 +19,8 @@
     "cordis.patch.yml",
     "examples/grok-bot.json.example",
     "icon.png",
+    "locale/zh.json",
+    "locale/en.json",
     "docs/logo.png"
   ],
   "license": "MIT",

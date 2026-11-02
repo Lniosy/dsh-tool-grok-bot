@@ -2,7 +2,7 @@
   <img src="docs/logo.png" width="168" alt="DeepSeek Harness 与 Grok Bot 接通">
 </p>
 
-<h1 align="center">dsh-tool-grok-bot</h1>
+<h1 align="center">接通 Grok Bot</h1>
 
 <p align="center">
   在 DeepSeek Harness 里接通 Grok Bot。<br>

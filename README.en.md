@@ -2,7 +2,7 @@
   <img src="docs/logo.png" width="168" alt="DeepSeek Harness linked with Grok Bot">
 </p>
 
-<h1 align="center">dsh-tool-grok-bot</h1>
+<h1 align="center">Connect Grok Bot</h1>
 
 <p align="center">
   Connect Grok Bot from DeepSeek Harness.<br>
