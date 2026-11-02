@@ -27,10 +27,14 @@ DeepSeek Harness                         Grok Bot
 
 | 工具 | 作用 |
 |---|---|
+| `grok_bot_status` | 看本机登录通不通，并数一下 Bot |
 | `grok_bot_list` | 列出 Bot。`kind` 为 `team` 的是团队房间 |
+| `grok_bot_history` | 读最近的对话，不新发消息 |
 | `grok_bot_ask` | 发给一个 Bot，或一个团队房间 |
 | `grok_bot_ask_team` | 同一句话分别发给最多 8 个 Bot |
-| `grok_bot_memory_list` | 列出一个 Bot 的云端记忆 |
+| `grok_bot_computer` | 请 Bot 在它自己的电脑上做事，把结果文字贴回来 |
+| `grok_bot_memory_recall` | 按一句话回忆相关事实 |
+| `grok_bot_memory_list` | 导出云端记忆。一批列完就返回，没列完可以再拉 |
 | `grok_bot_memory_write` | 写入一条。位置是账号共用或仅此 Bot，属性是指令或普通事实 |
 | `grok_bot_memory_forget` | 按原文忘掉一条 |
 

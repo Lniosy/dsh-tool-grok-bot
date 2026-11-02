@@ -27,10 +27,14 @@ tools called from chat                   the cloud bot, and its own computer
 
 | Tool | What it does |
 |---|---|
+| `grok_bot_status` | Check the local login and count bots |
 | `grok_bot_list` | List bots. `kind: team` is a team room |
+| `grok_bot_history` | Read recent chat without sending a new message |
 | `grok_bot_ask` | Ask one bot, or one team room |
 | `grok_bot_ask_team` | Ask up to 8 bots the same text, separately |
-| `grok_bot_memory_list` | List one bot's cloud memory |
+| `grok_bot_computer` | Ask a bot to work on its own computer and paste the text back |
+| `grok_bot_memory_recall` | Recall facts related to one sentence |
+| `grok_bot_memory_list` | Export cloud memory. Returns a finished batch, then can be called again |
 | `grok_bot_memory_write` | Write one fact. Place is shared or this bot only. Kind is instruction or ordinary fact |
 | `grok_bot_memory_forget` | Forget one fact by its original text |
 
