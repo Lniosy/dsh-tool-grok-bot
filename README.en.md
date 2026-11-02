@@ -14,6 +14,8 @@ Send one message to a Grok Bot from [DeepSeek Harness](https://github.com/deepse
 
 The reply also shows up in that bot's official chat.
 
+After install, Harness lists a `grok-bot` skill and reads it before calling the tools above. The skill states that a bot has its own cloud computer: the work and any result files stay on that computer, not on the machine running Harness.
+
 ## Install
 
 ```bash
