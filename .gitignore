@@ -1,0 +1,5 @@
+node_modules/
+grok-bot.json
+.DS_Store
+.env
+.env.*
