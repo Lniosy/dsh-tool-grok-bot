@@ -24,7 +24,7 @@ dsh plugin --profile web add github:Lniosy/dsh-tool-grok-bot
 
 ## 登录
 
-在 `DSH_HOME/grok-bot.json` 写入自己的登录，文件格式见 [examples/grok-bot.json.example](examples/grok-bot.json.example)。这个文件不要提交，也不要发到 Issue 里。
+把登录写到 `~/.dsh/grok-bot.json`。桌面版不另设目录时就读这里。格式见 [examples/grok-bot.json.example](examples/grok-bot.json.example)。这个文件不要提交，也不要发到 Issue 里。
 
 也可以改用环境变量 `GROK_BOT_ACCESS_TOKEN` 和 `GROK_BOT_MACHINE_ID`。
 

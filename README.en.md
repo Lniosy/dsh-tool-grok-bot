@@ -22,7 +22,7 @@ dsh plugin --profile web add github:Lniosy/dsh-tool-grok-bot
 
 ## Login
 
-Put your own login in `DSH_HOME/grok-bot.json`. The shape is in [examples/grok-bot.json.example](examples/grok-bot.json.example). Do not commit that file, and do not paste it into an issue.
+Put your own login in `~/.dsh/grok-bot.json`. The desktop app reads that file when it has no other home directory. The shape is in [examples/grok-bot.json.example](examples/grok-bot.json.example). Do not commit that file, and do not paste it into an issue.
 
 `GROK_BOT_ACCESS_TOKEN` and `GROK_BOT_MACHINE_ID` work as well.
 
