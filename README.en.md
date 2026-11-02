@@ -1,8 +1,27 @@
-# dsh-tool-grok-bot
+<p align="center">
+  <img src="docs/logo.png" width="168" alt="DeepSeek Harness linked with Grok Bot">
+</p>
 
-Send one message to a Grok Bot from [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 0.2.1 and read the reply.
+<h1 align="center">dsh-tool-grok-bot</h1>
 
-[中文](README.md)
+<p align="center">
+  Connect Grok Bot from DeepSeek Harness.<br>
+  Send one line, read the reply, and manage cloud memory.
+</p>
+
+<p align="center">
+  The whale is Harness. The two eyes are Grok Bot. Together they mean the two sides can talk.<br>
+  <a href="README.md">中文</a>
+  ·
+  <a href="https://github.com/deepseek-ai/deepseek-harness">DeepSeek Harness 0.2.1</a>
+</p>
+
+```
+DeepSeek Harness                         Grok Bot
+tools called from chat                   the cloud bot, and its own computer
+        │                                        │
+        └──────────── this plugin links ─────────┘
+```
 
 ## Tools
 
@@ -15,11 +34,23 @@ Send one message to a Grok Bot from [DeepSeek Harness](https://github.com/deepse
 | `grok_bot_memory_write` | Write one fact. Place is shared or this bot only. Kind is instruction or ordinary fact |
 | `grok_bot_memory_forget` | Forget one fact by its original text |
 
-The reply also shows up in that bot's official chat.
+Replies, writes, and forgets also show up in that bot's official chat.
 
-After install, Harness lists a `grok-bot` skill and reads it before calling these tools. The skill states two facts: a bot has its own cloud computer, so the work and result files stay there; memory is also in the cloud, not on this machine and not in files on that computer. Writes and forgets show up in that bot's official chat.
+After install, Harness lists a `grok-bot` skill and reads it before calling these tools. The skill states that a bot has its own cloud computer, so the work and result files stay there, and that memory is in the cloud too.
+
+## Where things live
+
+| Place | What is there |
+|---|---|
+| The bot's own computer | File reads, commands, screenshots, and result files |
+| Cloud memory | Facts shared by the account, or kept for one bot. Persona, skills, and chat history sit elsewhere |
+| This computer | Harness and this plugin. Result files from the bot do not land here |
 
 ## Install
+
+In the desktop app, install `github:Lniosy/dsh-tool-grok-bot` from the plugin page, then quit and reopen the app.
+
+For a command-line profile:
 
 ```bash
 dsh plugin --profile web add github:Lniosy/dsh-tool-grok-bot

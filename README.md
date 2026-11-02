@@ -1,8 +1,27 @@
-# dsh-tool-grok-bot
+<p align="center">
+  <img src="docs/logo.png" width="168" alt="DeepSeek Harness 与 Grok Bot 接通">
+</p>
 
-在 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 0.2.1 里，把一句话发给指定的 Grok Bot，并取回回复。
+<h1 align="center">dsh-tool-grok-bot</h1>
 
-[English](README.en.md)
+<p align="center">
+  在 DeepSeek Harness 里接通 Grok Bot。<br>
+  发一句话，取回回复，并管理云端记忆。
+</p>
+
+<p align="center">
+  鲸鱼是 Harness，两道眼睛是 Grok Bot。套在一起，表示两边能互通。<br>
+  <a href="README.en.md">English</a>
+  ·
+  <a href="https://github.com/deepseek-ai/deepseek-harness">DeepSeek Harness 0.2.1</a>
+</p>
+
+```
+DeepSeek Harness                         Grok Bot
+对话里调用工具                            云端 Bot，和它自己的电脑
+        │                                        │
+        └──────────── 这条插件接通 ──────────────┘
+```
 
 ## 工具
 
@@ -15,17 +34,27 @@
 | `grok_bot_memory_write` | 写入一条。位置是账号共用或仅此 Bot，属性是指令或普通事实 |
 | `grok_bot_memory_forget` | 按原文忘掉一条 |
 
-回复会出现在那个 Bot 的官方对话里。
+回复、写入和忘掉都会出现在那个 Bot 的官方对话里。
 
-安装后，Harness 的技能目录里会有 `grok-bot`。助手在调用这些工具之前会先读它。技能写明两件事：Bot 有自己的云端电脑，任务过程和结果文件都在那台电脑上；记忆也在云端，不在本机，也不在那台电脑的文件里。写入和忘掉会出现在该 Bot 的官方对话里。
+安装后，技能目录里会有 `grok-bot`。助手调用工具前会先读它。里面写明：Bot 有自己的云端电脑，任务过程和结果文件都在那台电脑上；记忆也在云端。
+
+## 地点
+
+| 地点 | 里面有什么 |
+|---|---|
+| Bot 自己的电脑 | 读文件、跑命令、截图、写出的结果文件 |
+| 云端记忆 | 账号共用或仅此 Bot 的事实。人设、技能、聊天记录另有位置 |
+| 这台电脑 | 只跑 Harness 和本插件。Bot 的结果文件不落在这里 |
 
 ## 安装
+
+桌面版在应用的插件页安装 `github:Lniosy/dsh-tool-grok-bot`，装完完全退出再打开。
+
+命令行 profile：
 
 ```bash
 dsh plugin --profile web add github:Lniosy/dsh-tool-grok-bot
 ```
-
-`dsh plugin` 会把它记进这个 profile 的插件层。
 
 ## 登录
 
