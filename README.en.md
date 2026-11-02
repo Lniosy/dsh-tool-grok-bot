@@ -1,6 +1,6 @@
 # dsh-tool-grok-bot
 
-Send one message to a Grok Bot from [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) and read the reply.
+Send one message to a Grok Bot from [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 0.2.1 and read the reply.
 
 [中文](README.md)
 

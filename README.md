@@ -1,6 +1,6 @@
 # dsh-tool-grok-bot
 
-在 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 里，把一句话发给指定的 Grok Bot，并取回回复。
+在 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 0.2.1 里，把一句话发给指定的 Grok Bot，并取回回复。
 
 [English](README.en.md)
 
