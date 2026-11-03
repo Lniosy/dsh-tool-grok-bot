@@ -16,6 +16,12 @@
   <a href="https://github.com/deepseek-ai/deepseek-harness">DeepSeek Harness 0.2.1</a>
 </p>
 
+<p align="center">
+  <a href="dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&version=0.2.7&repo=Lniosy%2Fdsh-tool-grok-bot&permissions=%E8%AF%BB%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%99%BB%E5%BD%95%2C%E8%B0%83%E7%94%A8%20Grok%20Bot&downloadUrl=https%3A%2F%2Fgithub.com%2FLniosy%2Fdsh-tool-grok-bot%2Farchive%2Frefs%2Fheads%2Fmain.zip">
+    <img src="https://img.shields.io/badge/DeepSeek%20Harness-Install%20in%20one%20click-0066FF?style=for-the-badge" alt="Install in one click" />
+  </a>
+</p>
+
 ```
 DeepSeek Harness                         Grok Bot
 tools called from chat                   the cloud bot, and its own computer
@@ -52,13 +58,88 @@ After install, Harness lists a `grok-bot` skill and reads it before calling thes
 
 ## Install
 
-In the desktop app, install `github:Lniosy/dsh-tool-grok-bot` from the plugin page, then quit and reopen the app.
+Three ways. After any of them, quit DeepSeek Harness and open it again. Refresh the page for the web app.
 
-For a command-line profile:
+### 1. One click
+
+The blue button at the top opens the desktop app with this address:
+
+```text
+dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&version=0.2.7&repo=Lniosy%2Fdsh-tool-grok-bot&permissions=%E8%AF%BB%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%99%BB%E5%BD%95%2C%E8%B0%83%E7%94%A8%20Grok%20Bot&downloadUrl=https%3A%2F%2Fgithub.com%2FLniosy%2Fdsh-tool-grok-bot%2Farchive%2Frefs%2Fheads%2Fmain.zip
+```
+
+If nothing opens, use the command or the script below. On Windows, `install.ps1` registers `dsh://` when the desktop app is installed and the protocol is missing.
+
+| Param | Value | Meaning |
+|---|---|---|
+| `id` | `dsh-tool-grok-bot` | Package name |
+| `name` | `接通 Grok Bot` | Display name |
+| `version` | `0.2.7` | Matches the version on main |
+| `repo` | `Lniosy/dsh-tool-grok-bot` | GitHub repo |
+| `permissions` | read the local login, call Grok Bot | What this plugin does |
+| `downloadUrl` | zip of the `main` branch | What the app downloads |
+
+### 2. Official command
+
+In the desktop app, install `github:Lniosy/dsh-tool-grok-bot` from the plugin page.
+
+From a terminal:
 
 ```bash
 dsh plugin --profile web add github:Lniosy/dsh-tool-grok-bot
 ```
+
+Use `default` instead of `web` for the desktop profile.
+
+### 3. Script
+
+Use the script when `dsh` is not on the path, but `~/.dsh` already exists. It checks node and pnpm, copies the plugin to `~/.dsh/plugins/dsh-tool-grok-bot`, backs up `package.json`, writes the `file:` dependency and the bundle name, then runs `pnpm install`.
+
+If both the web and desktop profiles exist, it installs into both. Running it again does not add a second copy. To install into one profile:
+
+```bash
+chmod +x install.sh uninstall.sh
+DSH_PROFILE=web ./install.sh
+```
+
+Windows: right-click `install.ps1` and choose Run with PowerShell. If that is blocked:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\install.ps1
+```
+
+Set `DSH_PROFILE` to `web` or `default` to target one profile. Set `DSH_HOME` when the data directory is not `~/.dsh`.
+
+### By hand
+
+Add this to `~/.dsh/profiles/web/package.json`, or `profiles/default` for the desktop app. Keep the entries that are already there.
+
+```json
+"dependencies": {
+  "dsh-tool-grok-bot": "file:../../plugins/dsh-tool-grok-bot"
+},
+"dsh": {
+  "profile": {
+    "bundles": ["@deepseek-ai/dsh-base", "dsh-tool-grok-bot"]
+  }
+}
+```
+
+Put the plugin files in `~/.dsh/plugins/dsh-tool-grok-bot`, then run `pnpm install` in that profile directory.
+
+## Check that it installed
+
+1. Quit the app and open it again. Refresh the web app.
+2. In a new chat, call `grok_bot_status`. A login check and a bot count mean it is installed.
+3. The skill list includes `grok-bot`.
+
+## Uninstall
+
+```bash
+./uninstall.sh
+```
+
+On Windows, run `uninstall.ps1`. Set `DSH_PROFILE` to uninstall one profile. The script backs up `package.json` and removes the dependency. It deletes the plugin directory only when no profile still uses it.
 
 ## Login
 
