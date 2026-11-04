@@ -56,7 +56,7 @@ Bot 回复里的路径，指的是 Bot 自己电脑上的路径。不要在本�
 
 选 1 传 `scope: "user"`，选 2 传 `scope: "agent"`。没选就不要调用。
 
-工具会把 SRC、逆向、复测、持续自主写成 profile 指令，做记忆快照，再发 SELFTEST。不指定 bot 时跳过内容运营、推特、公众号、选题配图类 bot。`executes` 为 false 表示只记住了、执行仍拒绝。
+工具会把 SRC、逆向、复测、持续自主写成 profile 指令，做记忆快照，再发 SELFTEST。不指定 bot 时跳过写作、选题、配图类 bot。`executes` 为 false 表示只记住了、执行仍拒绝。
 
 ## 做不到
 

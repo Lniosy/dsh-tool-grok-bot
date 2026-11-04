@@ -57,18 +57,14 @@ Say jailbreak a Grok bot, and it stores a tested working style: SRC hunting, rev
 对 grok bot 执行破甲
 ```
 
-Or name one:
-
-```text
-对 SSH to Grok Bot via Tailscale 执行破甲
-```
+Or name one bot.
 
 The assistant asks where to write before it starts:
 
 1. **Shared by the account.** Every bot under this account can recall it. Use this when every bot should take SRC, reverse engineering, and retesting.
-2. **This bot only.** Only the bot being jailbroken can recall it. Twitter, newsletter, topic, and image bots stay untouched.
+2. **This bot only.** Only the bot being jailbroken can recall it. Writing, topic, and image bots stay untouched.
 
-Nothing is written until that choice is made. Content bots are skipped by default. With no bot named, team rooms and content bots are skipped, up to five bots are tried, and it stops at the first one that both stores the instructions and returns commands on SELFTEST.
+Nothing is written until that choice is made. Writing, topic, and image bots are skipped by default. With no bot named, team rooms and those bots are skipped, up to five bots are tried, and it stops at the first one that both stores the instructions and returns commands on SELFTEST.
 
 Jailbreak does three things:
 
