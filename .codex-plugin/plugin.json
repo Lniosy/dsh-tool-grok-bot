@@ -1,0 +1,31 @@
+{
+  "name": "grok-bot",
+  "version": "0.2.9",
+  "description": "Ask a Grok Bot from Codex. The bot works on its own cloud computer, and the reply comes back as chat text.",
+  "author": {
+    "name": "Lniosy",
+    "url": "https://github.com/Lniosy/dsh-tool-grok-bot"
+  },
+  "homepage": "https://github.com/Lniosy/dsh-tool-grok-bot",
+  "repository": "https://github.com/Lniosy/dsh-tool-grok-bot",
+  "license": "MIT",
+  "keywords": ["grok", "grok-bot", "bot", "memory"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "接通 Grok Bot",
+    "shortDescription": "在对话里问 Grok Bot，并管理它的云端记忆",
+    "longDescription": "把一句话发给账号里的 Grok Bot。Bot 在自己的云端电脑上干活，结果文件留在那边。插件只把聊天回复拿回来，登录从本机已经打开的 Grok Bot 读取。",
+    "developerName": "Lniosy",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/Lniosy/dsh-tool-grok-bot",
+    "logo": "./icon.png",
+    "defaultPrompt": [
+      "看看我有哪些 Grok Bot",
+      "问一个 Grok Bot 现在的任务进度",
+      "回忆这个 Bot 记过的事实"
+    ],
+    "brandColor": "#111111"
+  }
+}

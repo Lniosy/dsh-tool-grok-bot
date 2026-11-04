@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "grok-bot": {
+      "command": "node",
+      "args": ["lib/codex-mcp.js"],
+      "cwd": "."
+    }
+  }
+}

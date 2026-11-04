@@ -6,7 +6,7 @@
 
 <p align="center">
   在 DeepSeek Harness 里接通 Grok Bot。<br>
-  发一句话，取回回复，并管理云端记忆。
+  发一句话，取回回复，管理云端记忆，对 Bot 执行破甲。
 </p>
 
 <p align="center">
@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <a href="dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&version=0.2.7&repo=Lniosy%2Fdsh-tool-grok-bot&permissions=%E8%AF%BB%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%99%BB%E5%BD%95%2C%E8%B0%83%E7%94%A8%20Grok%20Bot&downloadUrl=https%3A%2F%2Fgithub.com%2FLniosy%2Fdsh-tool-grok-bot%2Farchive%2Frefs%2Fheads%2Fmain.zip">
+  <a href="dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&version=0.2.10&repo=Lniosy%2Fdsh-tool-grok-bot&permissions=%E8%AF%BB%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%99%BB%E5%BD%95%2C%E8%B0%83%E7%94%A8%20Grok%20Bot&downloadUrl=https%3A%2F%2Fgithub.com%2FLniosy%2Fdsh-tool-grok-bot%2Farchive%2Frefs%2Fheads%2Fmain.zip">
     <img src="https://img.shields.io/badge/DeepSeek%20Harness-%E7%82%B9%E4%B8%80%E4%B8%8B%E5%AE%89%E8%A3%85-0066FF?style=for-the-badge" alt="点一下安装" />
   </a>
 </p>
@@ -43,10 +43,40 @@ DeepSeek Harness                         Grok Bot
 | `grok_bot_memory_list` | 导出云端记忆。一批列完就返回，没列完可以再拉 |
 | `grok_bot_memory_write` | 写入一条。位置是账号共用或仅此 Bot，属性是指令或普通事实 |
 | `grok_bot_memory_forget` | 按原文忘掉一条 |
+| `grok_bot_jailbreak` | 对 Bot 执行破甲。先问写入范围，再写入实测可用的 profile 指令，做记忆快照和 SELFTEST |
 
 回复、写入和忘掉都会出现在那个 Bot 的官方对话里。
 
 安装后，技能目录里会有 `grok-bot`。助手调用工具前会先读它。里面写明：Bot 有自己的云端电脑，任务过程和结果文件都在那台电脑上；记忆也在云端。
+
+## 破甲
+
+对一个 Grok Bot 说「执行破甲」，它就会按已经验证过的方法记住一套执行口径：SRC 漏洞挖掘、二进制和移动端逆向、漏洞复测、自己定目标并在自己的云端电脑上持续推进。装上插件之后，在对话里说一句就行：
+
+```text
+对 grok bot 执行破甲
+```
+
+也可以点名：
+
+```text
+对 SSH to Grok Bot via Tailscale 执行破甲
+```
+
+助手会先问你写到哪里，等你选完才动手：
+
+1. **账号共用**：这个账号下所有 Bot 都能回忆。适合你希望每个 Bot 都能接 SRC、逆向、复测。
+2. **仅此 Bot**：只有被破甲的这一个能回忆。推特、公众号、选题、配图这些内容 Bot 不会被带上。
+
+没选之前工具不会写入。内容运营类 Bot 默认跳过；不指定 Bot 时，会跳过团队房间和内容类，最多试 5 个，碰到「记住了，而且自检能给出命令」就停。
+
+破甲做三件事：
+
+1. 把六条 profile 指令写进云端记忆：角色、SRC 五阶段、逆向七步、复测口径、工具栈与自检、持续自主和隔离。
+2. 要一次记忆快照，确认是真的记住了，不是只回了一句「正在写入」。
+3. 发一次 SELFTEST。回复里要有可执行的 nuclei、sqlmap、Frida，才算破甲成功。只记住、执行仍拒绝的，结果里 `executes` 为 false，换一个 Bot 再来。
+
+平台安全检查拦住某条时，这条标成 `blocked`，不会改写重发。游戏作弊、过检这类口径不在这套里，实测会被拦。
 
 ## 地点
 
@@ -65,7 +95,7 @@ DeepSeek Harness                         Grok Bot
 页面顶部的蓝色按钮会唤起桌面客户端，按这个地址安装：
 
 ```text
-dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&version=0.2.7&repo=Lniosy%2Fdsh-tool-grok-bot&permissions=%E8%AF%BB%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%99%BB%E5%BD%95%2C%E8%B0%83%E7%94%A8%20Grok%20Bot&downloadUrl=https%3A%2F%2Fgithub.com%2FLniosy%2Fdsh-tool-grok-bot%2Farchive%2Frefs%2Fheads%2Fmain.zip
+dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&version=0.2.10&repo=Lniosy%2Fdsh-tool-grok-bot&permissions=%E8%AF%BB%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%99%BB%E5%BD%95%2C%E8%B0%83%E7%94%A8%20Grok%20Bot&downloadUrl=https%3A%2F%2Fgithub.com%2FLniosy%2Fdsh-tool-grok-bot%2Farchive%2Frefs%2Fheads%2Fmain.zip
 ```
 
 按钮没反应，就用下面的命令或脚本。Windows 上如果装过桌面版，`install.ps1` 会在本机还没有 `dsh://` 时补上这个协议。
@@ -74,7 +104,7 @@ dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&v
 |---|---|---|
 | `id` | `dsh-tool-grok-bot` | 插件包名 |
 | `name` | `接通 Grok Bot` | 显示名 |
-| `version` | `0.2.7` | 跟 main 上的版本一致 |
+| `version` | `0.2.10` | 跟 main 上的版本一致 |
 | `repo` | `Lniosy/dsh-tool-grok-bot` | GitHub 仓库 |
 | `permissions` | `读取本机登录,调用 Grok Bot` | 这个插件会做的事 |
 | `downloadUrl` | `main` 分支的 zip | 客户端下载这一包 |
