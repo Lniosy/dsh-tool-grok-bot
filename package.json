@@ -1,6 +1,6 @@
 {
   "name": "dsh-tool-grok-bot",
-  "version": "0.2.10",
+  "version": "0.2.8",
   "description": "Ask one Grok Bot, or several bots, from DeepSeek Harness or Codex.",
   "type": "module",
   "main": "lib/index.js",

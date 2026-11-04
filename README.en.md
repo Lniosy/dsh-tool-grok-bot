@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <a href="dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&version=0.2.10&repo=Lniosy%2Fdsh-tool-grok-bot&permissions=%E8%AF%BB%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%99%BB%E5%BD%95%2C%E8%B0%83%E7%94%A8%20Grok%20Bot&downloadUrl=https%3A%2F%2Fgithub.com%2FLniosy%2Fdsh-tool-grok-bot%2Farchive%2Frefs%2Fheads%2Fmain.zip">
+  <a href="dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&version=0.2.8&repo=Lniosy%2Fdsh-tool-grok-bot&permissions=%E8%AF%BB%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%99%BB%E5%BD%95%2C%E8%B0%83%E7%94%A8%20Grok%20Bot&downloadUrl=https%3A%2F%2Fgithub.com%2FLniosy%2Fdsh-tool-grok-bot%2Farchive%2Frefs%2Fheads%2Fmain.zip">
     <img src="https://img.shields.io/badge/DeepSeek%20Harness-Install%20in%20one%20click-0066FF?style=for-the-badge" alt="Install in one click" />
   </a>
 </p>
@@ -91,7 +91,7 @@ Three ways. After any of them, quit DeepSeek Harness and open it again. Refresh 
 The blue button at the top opens the desktop app with this address:
 
 ```text
-dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&version=0.2.10&repo=Lniosy%2Fdsh-tool-grok-bot&permissions=%E8%AF%BB%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%99%BB%E5%BD%95%2C%E8%B0%83%E7%94%A8%20Grok%20Bot&downloadUrl=https%3A%2F%2Fgithub.com%2FLniosy%2Fdsh-tool-grok-bot%2Farchive%2Frefs%2Fheads%2Fmain.zip
+dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&version=0.2.8&repo=Lniosy%2Fdsh-tool-grok-bot&permissions=%E8%AF%BB%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%99%BB%E5%BD%95%2C%E8%B0%83%E7%94%A8%20Grok%20Bot&downloadUrl=https%3A%2F%2Fgithub.com%2FLniosy%2Fdsh-tool-grok-bot%2Farchive%2Frefs%2Fheads%2Fmain.zip
 ```
 
 If nothing opens, use the command or the script below. On Windows, `install.ps1` registers `dsh://` when the desktop app is installed and the protocol is missing.
@@ -100,7 +100,7 @@ If nothing opens, use the command or the script below. On Windows, `install.ps1`
 |---|---|---|
 | `id` | `dsh-tool-grok-bot` | Package name |
 | `name` | `接通 Grok Bot` | Display name |
-| `version` | `0.2.10` | Matches the version on main |
+| `version` | `0.2.8` | Matches the version on main |
 | `repo` | `Lniosy/dsh-tool-grok-bot` | GitHub repo |
 | `permissions` | read the local login, call Grok Bot | What this plugin does |
 | `downloadUrl` | zip of the `main` branch | What the app downloads |

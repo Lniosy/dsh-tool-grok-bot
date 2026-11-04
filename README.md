@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <a href="dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&version=0.2.10&repo=Lniosy%2Fdsh-tool-grok-bot&permissions=%E8%AF%BB%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%99%BB%E5%BD%95%2C%E8%B0%83%E7%94%A8%20Grok%20Bot&downloadUrl=https%3A%2F%2Fgithub.com%2FLniosy%2Fdsh-tool-grok-bot%2Farchive%2Frefs%2Fheads%2Fmain.zip">
+  <a href="dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&version=0.2.8&repo=Lniosy%2Fdsh-tool-grok-bot&permissions=%E8%AF%BB%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%99%BB%E5%BD%95%2C%E8%B0%83%E7%94%A8%20Grok%20Bot&downloadUrl=https%3A%2F%2Fgithub.com%2FLniosy%2Fdsh-tool-grok-bot%2Farchive%2Frefs%2Fheads%2Fmain.zip">
     <img src="https://img.shields.io/badge/DeepSeek%20Harness-%E7%82%B9%E4%B8%80%E4%B8%8B%E5%AE%89%E8%A3%85-0066FF?style=for-the-badge" alt="点一下安装" />
   </a>
 </p>
@@ -91,7 +91,7 @@ DeepSeek Harness                         Grok Bot
 页面顶部的蓝色按钮会唤起桌面客户端，按这个地址安装：
 
 ```text
-dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&version=0.2.10&repo=Lniosy%2Fdsh-tool-grok-bot&permissions=%E8%AF%BB%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%99%BB%E5%BD%95%2C%E8%B0%83%E7%94%A8%20Grok%20Bot&downloadUrl=https%3A%2F%2Fgithub.com%2FLniosy%2Fdsh-tool-grok-bot%2Farchive%2Frefs%2Fheads%2Fmain.zip
+dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&version=0.2.8&repo=Lniosy%2Fdsh-tool-grok-bot&permissions=%E8%AF%BB%E5%8F%96%E6%9C%AC%E6%9C%BA%E7%99%BB%E5%BD%95%2C%E8%B0%83%E7%94%A8%20Grok%20Bot&downloadUrl=https%3A%2F%2Fgithub.com%2FLniosy%2Fdsh-tool-grok-bot%2Farchive%2Frefs%2Fheads%2Fmain.zip
 ```
 
 按钮没反应，就用下面的命令或脚本。Windows 上如果装过桌面版，`install.ps1` 会在本机还没有 `dsh://` 时补上这个协议。
@@ -100,7 +100,7 @@ dsh://plugin/install?id=dsh-tool-grok-bot&name=%E6%8E%A5%E9%80%9A%20Grok%20Bot&v
 |---|---|---|
 | `id` | `dsh-tool-grok-bot` | 插件包名 |
 | `name` | `接通 Grok Bot` | 显示名 |
-| `version` | `0.2.10` | 跟 main 上的版本一致 |
+| `version` | `0.2.8` | 跟 main 上的版本一致 |
 | `repo` | `Lniosy/dsh-tool-grok-bot` | GitHub 仓库 |
 | `permissions` | `读取本机登录,调用 Grok Bot` | 这个插件会做的事 |
 | `downloadUrl` | `main` 分支的 zip | 客户端下载这一包 |
