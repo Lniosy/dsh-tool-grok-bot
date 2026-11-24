@@ -14,6 +14,8 @@
   <a href="README.md">中文</a>
   ·
   <a href="https://github.com/deepseek-ai/deepseek-harness">DeepSeek Harness 0.2.1</a>
+  ·
+  <a href="https://x.com/Lniosytest">Author on X</a>
 </p>
 
 <p align="center">
@@ -172,6 +174,11 @@ On Windows, run `uninstall.ps1`. Set `DSH_PROFILE` to uninstall one profile. The
 No file to fill in. When Grok Bot is already signed in on this computer, the plugin reads that login itself. Open Grok Bot once, then call a tool from Harness.
 
 A machine without Grok Bot can still use `~/.dsh/grok-bot.json`. The shape is in [examples/grok-bot.json.example](examples/grok-bot.json.example). Do not commit that file. `GROK_BOT_ACCESS_TOKEN` and `GROK_BOT_MACHINE_ID` override the local login.
+
+## Follow
+
+Follow Tiancai Li ([@Lniosytest](https://x.com/Lniosytest)) on X for plugin updates, AI tools, Grok Bot and agent workflows, and open-source projects.
+Site: [litiancai.vercel.app](https://litiancai.vercel.app).
 
 ## License
 

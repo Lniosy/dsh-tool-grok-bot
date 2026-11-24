@@ -14,6 +14,8 @@
   <a href="README.en.md">English</a>
   ·
   <a href="https://github.com/deepseek-ai/deepseek-harness">DeepSeek Harness 0.2.1</a>
+  ·
+  <a href="https://x.com/Lniosytest">作者 X</a>
 </p>
 
 <p align="center">
@@ -179,6 +181,12 @@ Windows 运行 `uninstall.ps1`。只卸一个 profile 时同样设 `DSH_PROFILE`
 不用手填。本机的 Grok Bot 已经登录时，插件自己读取这份登录。先打开一次 Grok Bot，再在 Harness 里调用工具。
 
 没有安装 Grok Bot 的环境，才把登录写到 `~/.dsh/grok-bot.json`，格式见 [examples/grok-bot.json.example](examples/grok-bot.json.example)。这个文件不要提交。环境变量 `GROK_BOT_ACCESS_TOKEN` 和 `GROK_BOT_MACHINE_ID` 可以盖过本机登录。
+
+## 关注作者
+
+在 X 上关注李天才（[@Lniosytest](https://x.com/Lniosytest)）。插件更新和更多 AI 工具会发在那里。
+内容还包括 Grok Bot / DeepSeek Harness 的玩法，以及独立开发的开源项目。
+个人站：[litiancai.vercel.app](https://litiancai.vercel.app)。
 
 ## 许可
 
